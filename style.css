@@ -1,0 +1,408 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* grid */
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        'navbar navbar navbar navbar'
+        'home home home home'
+        'services services services services'
+        'contact contact contact contact'
+        'footer footer footer footer';
+
+}
+/* navigation  */
+#navbar {
+    grid-area: navbar;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    font-family: 'Bebas Neue', sans-serif;
+    /* text-shadow: 0px 0px 10px black; */
+
+}
+
+#navbar ul li {
+    padding: 0px 5px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    padding: 2px 14px;
+    font-size: 1.3rem;
+    color: white;
+    transition: 0.5s;
+}
+#navbar ul li .active,
+#navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    text-shadow: 0px 0px 0px black;
+}
+
+#logo {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+#logo img {
+    height: 70px;
+}
+
+/* home */
+#home {
+    grid-area: home;
+    height: 580px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 57%;
+    border: 7px solid white;
+    width: 52%;
+    margin-top: 100px;
+    margin-left: 120px;
+    /* margin: 100px 120px; */
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px white;
+}
+
+#home::before {
+    content: "";
+    background: url(https://images.creativemarket.com/0.1.0/ps/4833749/1820/1213/m1/fpnw/wm1/wbqwlmk8mlit5kyyjpb0oeujbpxl7cdhdsl5x2gpo2chgdpuw1ulo22kdnnhhl76-.jpg?1532958573&s=79f2b8451dbf2e4e01281e7c7cc641e5)no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 672px;
+    width: 100%;
+    z-index: -3;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: white;
+    padding-bottom: 10px;
+    font-size: 2.3rem;
+}
+
+#home p {
+    margin: 5px 0px;
+    color: white;
+
+}
+
+.btn {
+    padding: 2px 16px;
+    margin-top: 16px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* services */
+#services {
+    grid-area: services;
+    position: relative;
+}
+
+#services::before {
+    content: "";
+    background-color: #fdf4e7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.services-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 5px;
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: 80px; */
+}
+
+#services .item {
+    border: 3px solid black;
+    margin: 0px 7px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 7px 4px;
+    box-shadow: 0px 0px 10px black;
+
+
+
+
+}
+
+#services img {
+    height: 75px;
+    display: block;
+    margin: auto;
+
+}
+
+#services p {
+    color: black;
+
+}
+
+#services h1 {
+    color: black;
+    /* position: relative;
+    top: 36px; */
+    padding: 5px;
+}
+
+/* contact */
+#contact {
+    grid-area: contact;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#contact::before {
+    content: "";
+    background-color: black;
+    /* background: url(contact.jpg)no-repeat center center/cover; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+
+#contact input {
+    width: 30%;
+    margin: 7px 1px;
+    padding: 14px 19px;
+    border-radius: 50px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px white;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 285px; */
+
+    /* position: relative;
+top: 80px; */
+}
+
+#contact input[type='submit'] {
+    width: 100px;
+}
+
+#contact h1 {
+    margin: 5px;
+    color: white;
+    /* position: relative;
+    top: 36px; */
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+/* utility */
+.h-primary {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    text-align: center;
+
+}
+
+.h-secondary {
+    font-size: 1.5rem;
+
+}
+
+
+
+@media only screen and (min-width:430px) and (max-width:784px) {
+
+    /* home */
+#navbar ul li a{
+    font-size: 1.1rem;
+}
+#logo img{
+    height: 55px;
+}
+#home h1{
+    font-size: 1.2rem;
+}
+.home-section{
+    height: 43%;
+    width: 48%;
+    margin-left: 80px;
+}
+#home p{
+    font-size: 0.7rem;
+}
+#home .btn{
+    font-size: 0.7rem;
+}
+
+
+
+/* services */
+#services img{
+    height: 60px;
+}
+.services-box{
+    flex-direction: column;
+    
+}
+#services p{
+    font-size: 0.7rem;
+}
+
+
+
+/* contact */
+#contact input{
+    /* width: 260px; */
+    font-size: 0.7rem;
+    margin: 5px 1px;
+    padding: 12px 16px;
+
+}
+
+
+
+/* footer */
+footer{
+    font-size: 0.7rem;
+}
+
+/* utility classes */
+.h-primary{
+    font-size: 1.5rem;
+}
+.h-secondary{
+    font-size: 1.3rem;
+}
+}
+@media only screen and (max-width:430px){
+   
+    /* home */
+#navbar ul li a{
+    font-size: 1rem;
+}
+#navbar ul{
+    margin-bottom: 7px;
+}
+#navbar{
+    flex-direction: column;
+}
+#logo img{
+    height: 55px;
+    margin-bottom: 5px;
+}
+#home{
+    height: 575px;
+}
+#home h1{
+    font-size: 1.2rem;
+}
+.home-section{
+    height: 54%;
+    width: 73%;
+    margin-left: 25px;
+}
+#home p{
+    font-size: 0.7rem;
+}
+#home .btn{
+    font-size: 0.7rem;
+}
+/* services */
+#services img{
+    height: 60px;
+}
+
+.services-box{
+    flex-direction: column;
+    
+}
+body{
+    background-color: yellow;
+}
+#services p{
+    font-size: 0.7rem;
+}
+/* contact */
+#contact input{
+    /* width: 260px; */
+        /* width: 260px; */
+        font-size: 0.7rem;
+        margin: 2px 0px;
+        padding: 8px 20px;
+
+}
+#contact form{
+    margin-bottom: 10px;
+}
+footer{
+    font-size: 0.7rem;
+}
+.h-primary{
+    font-size: 2rem;
+}
+}
